@@ -67,10 +67,3 @@ python -m unittest test_parking_summon.py
 
 This project is licensed under the MIT License.
 ```
-
-### Notes:
-
-1. **Test Cases**: The tests use `StringIO` to simulate file input. For more robust testing, you could use actual files or mock external dependencies.
-2. **README**: This file provides a high-level overview and instructions. Adjust file paths and details as per your actual setup.
-
-Let me know if you need further modifications or additional information!
