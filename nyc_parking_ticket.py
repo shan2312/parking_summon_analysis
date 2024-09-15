@@ -23,7 +23,12 @@ class ParkingSummonIterator:
         Args:
             filepath (string): path to file containing summons data
         """
-        self._file = open(filepath, mode = 'r', newline = '\n', encoding='utf-8')
+        try:
+            self._file = open(filepath, mode = 'r', newline = '\n', encoding='utf-8')
+        except Exception as e:
+            print('Error in reading file')
+            self._file.close()
+            raise
         self._reader = csv.DictReader(self._file, delimiter=',', quotechar='"')
         self.type_map = {'Summons Number': int, 'Plate ID': str, 'Registration State':str, 'Plate Type':str, 'Issue Date':lambda x: datetime.strptime(x, "%m/%d/%Y"), 'Violation Code':int, 'Vehicle Body Type':str, 'Vehicle Make':str, 'Violation Description':str}
         self.Summon = namedtuple('Summon', [name.replace(" ", "_") for name in self._reader.fieldnames])
