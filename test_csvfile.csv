@@ -1,0 +1,4 @@
+Summons Number,Plate ID,Registration State,Plate Type,Issue Date,Violation Code,Vehicle Body Type,Vehicle Make,Violation Description
+12345,ABC123,NY,ABC,01/01/2024,1,SEDAN,Toyota,Expired Meter
+67890,XYZ789,NY,XYZ,01/02/2024,2,COUPE,Ford,No Permit
+13579,DEF456,CA,DEF,01/03/2024,1,SEDAN,Toyota,No Permit
